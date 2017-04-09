@@ -1,0 +1,15 @@
+.day-theme {
+  background-color: #f4f4f1;
+}
+
+.day-theme p {
+  color: black;
+}
+
+.night-theme {
+  background-color: #282c34;
+}
+
+.night-theme p {
+  color: #f4f4f1;
+}
