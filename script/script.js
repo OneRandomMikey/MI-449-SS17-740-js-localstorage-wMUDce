@@ -29,8 +29,15 @@ visitCount.textContent = currentVisitTimes
 currentVisitTimes = currentVisitTimes + 1
 window.localStorage.setItem('visitTime', currentVisitTimes)
 
-document.getElementById('reset').addEventListener('click', function () {
-  window.localStorage.removeItem('Theme')
-  window.localStorage.removeItem('visitTime')
+// var btn = document.getElementById('restButton')
+// btn.addEventListener('click', function () {
+//   window.localStorage.removeItem('Theme')
+//   window.localStorage.removeItem('visitTime')
+//   window.localStorage.clear()
+// })
+document.getElementById('restButton').addEventListener('click', function () {
   window.localStorage.clear()
+  var currentTheme = window.localStorage.getItem('Theme')
+  document.body.setAttribute('class', currentTheme)
+  document.getElementById('message').innerHTML = '<p class="message">Visit <span id="visitTimes">1</span> times.</p>'
 })
